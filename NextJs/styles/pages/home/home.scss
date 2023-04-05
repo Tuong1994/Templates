@@ -1,0 +1,83 @@
+.home {
+  // CAROUSEL
+  .home-carousel {
+    height: 350px;
+    margin-top: $m-10;
+    margin-bottom: $m-10 * 5;
+    border-radius: $lightRadius;
+    .home-carousel-item {
+      padding: $p-10 * 4;
+      height: 100%;
+      background: $slate-1;
+      position: relative;
+      overflow: hidden;
+      .item-inner {
+        height: 100%;
+        .inner-image {
+          @include respond(largeTablet) {
+            display: none;
+          }
+        }
+        .inner-content {
+          padding: $p-10 * 2;
+          border-radius: $lightRadius;
+          background: $primary;
+          .content-divider {
+            border-block-start-color: $dark-1 !important;
+          }
+          .content-link {
+            border-color: $dark-1;
+            color: $tPrimary;
+            &:hover {
+              background: $white;
+              border-color: $white;
+            }
+          }
+          @include respond(largeTablet) {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+        }
+      }
+      @include respond(largeTablet) {
+        padding: $p-10 * 4;
+      }
+      @include respond(smallTablet) {
+        padding: $p-10;
+      }
+    }
+    @include respond(largeTablet) {
+      min-height: 300px;
+    }
+  }
+  .home-category {
+    margin-bottom: $m-10 * 5;
+    .category-title {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 4px solid $primary;
+      .title-detail {
+        width: 200px;
+        padding: $p-10;
+        text-align: center;
+        text-transform: uppercase;
+        background: $primary;
+        border-top-right-radius: $lightRadius;
+        border-top-left-radius: $lightRadius;
+      }
+      .title-link {
+        &:hover {
+          color: $tSecondary;
+        }
+      }
+    }
+    .category-item {
+      padding: $p-10 * 2 0;
+    }
+  }
+}

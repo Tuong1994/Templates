@@ -1,0 +1,91 @@
+.table-filter {
+  background: $gray-1;
+  padding: $p-10;
+  border-top-left-radius: $lightRadius;
+  border-top-right-radius: $lightRadius;
+  .filter-control {
+    margin: 0;
+  }
+}
+
+.table-custom {
+  border: 1px solid $gray-1;
+  border-radius: 0;
+  .ant-table {
+    border-radius: 0;
+    .ant-table-container {
+      border-start-start-radius: 0;
+      border-start-end-radius: 0;
+      table {
+        border-radius: 0;
+      }
+    }
+    .ant-table-thead {
+      tr {
+        border-radius: 0;
+        background: $white-1;
+        .ant-table-cell {
+          padding: $p-10;
+          text-align: center;
+          border-bottom: 1px solid $gray-1;
+          background: transparent;
+          &::before {
+            background: $dark-1 !important;
+          }
+          &:first-child {
+            border-start-start-radius: 0;
+          }
+          &:last-child {
+            border-start-end-radius: 0;
+          }
+        }
+      }
+    }
+    .ant-table-tbody {
+      & > tr {
+        .ant-table-cell {
+          text-align: center;
+        }
+        &:hover > .ant-table-cell {
+          background: $white-1;
+        }
+      }
+    }
+    .table-cell--width {
+      min-width: max-content;
+    }
+  }
+}
+
+.table-tooltip {
+  .ant-tooltip-arrow {
+    &::after,
+    &::before {
+      background: $white;
+    }
+  }
+  .ant-tooltip-content {
+    min-width: max-content;
+    width: 200px;
+    max-width: 300px;
+    .ant-tooltip-inner {
+      background: $white;
+      .ant-list-item {
+        width: 100%;
+        padding: 0;
+        border-block-end: unset;
+        .tooltip-checkbox {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          margin: $m-5 0;
+          span {
+            &:nth-child(2) {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

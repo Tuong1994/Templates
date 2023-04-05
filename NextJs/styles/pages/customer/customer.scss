@@ -1,0 +1,16 @@
+.customer {
+  .customer-content {
+    margin-bottom: $m-10 * 5;
+    .content-info {
+      background: $slate-1;
+      .info-name {
+        margin: 0;
+        color: $tWhite-1;
+      }
+      .info-subtitle,
+      .info-text {
+        color: $tWhite-1;
+      }
+    }
+  }
+}

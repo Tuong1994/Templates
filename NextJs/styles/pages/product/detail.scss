@@ -1,0 +1,30 @@
+.product-detail {
+  .product-detail-slider {
+    margin-bottom: $m-10 * 5;
+    .slider-img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .product-detail-info {
+    .info-rate {
+      .rate-note {
+        color: $tGray-2;
+      }
+    }
+    .info-price {
+      color: $tRed-1;
+      margin: $m-10 0;
+    }
+    .info-price--line {
+      color: $tGray-2;
+    }
+  }
+  .product-detail-tabs {
+    margin-bottom: $m-10 * 5;
+    .tabs-spec {
+      border-color: $gray-2;
+      border-radius: $lightRadius;
+    }
+  }
+}

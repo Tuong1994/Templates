@@ -1,0 +1,46 @@
+.steps {
+  padding: $p-10;
+  border: 1px solid $gray-2;
+  border-radius: 50px;
+  .ant-steps {
+    .ant-steps-item-title {
+      font-weight: 600;
+      color: $tPrimary !important;
+    }
+    .ant-steps-item-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ant-steps-item-wait {
+      .ant-steps-item-icon {
+        background: $orange-1;
+        border-color: $orange-1;
+        .ant-steps-finish-icon {
+          svg {
+            color: $tPrimary;
+          }
+        }
+      }
+    }
+    .ant-steps-item-finish {
+      .ant-steps-item-icon {
+        background: $primary;
+        border-color: $primary;
+        .ant-steps-finish-icon {
+          svg {
+            color: $tPrimary;
+          }
+        }
+      }
+      .ant-steps-item-title {
+        &::after {
+          background: $primary !important;
+        }
+      }
+    }
+  }
+  @include respond(largePhone) {
+    border-radius: $lightRadius;
+  }
+}

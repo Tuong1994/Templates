@@ -1,0 +1,21 @@
+.rate {
+  .rate-subtitle {
+    margin-top: 0;
+  }
+  .rate-star {
+    border-radius: $lightRadius;
+    border-color: $gray-2;
+    display: flex;
+    justify-content: center;
+    .star-tag {
+      display: block;
+      width: max-content;
+      margin-top: $m-10;
+    }
+  }
+  .rate-form {
+    .form-item {
+      margin: $m-5 0;
+    }
+  }
+}

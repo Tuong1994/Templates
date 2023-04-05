@@ -1,0 +1,98 @@
+.payment {
+  .payment-banner {
+    margin-bottom: $m-10 * 5;
+    padding: $p-10 * 4;
+    border: 0;
+    border-radius: $lightRadius;
+    background: $primary;
+    position: relative;
+    overflow: hidden;
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      .content-title {
+        margin-bottom: $m-10 * 5;
+      }
+      .content-text {
+        display: block;
+        color: $tWhite-1;
+        font-size: 18px;
+      }
+      .content-link {
+        display: block;
+        &:hover {
+          color: $tWhite-1 !important;
+          opacity: 0.5;
+        }
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: -100px;
+      width: 100% * 2;
+      height: 100% - 20;
+      background: $slate-1;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      @include respond(tablet) {
+        height: 100% - 25;
+        left: -150px;
+      }
+      @include respond(largePhone) {
+        height: 100% - 30;
+      }
+    }
+    @include respond(largePhone) {
+      padding: $p-10;
+    }
+  }
+  .payment-methods {
+    margin-bottom: $m-10 * 5;
+    .methods-card {
+      overflow: hidden;
+      border-color: $gray-1;
+      .ant-card-head {
+        border-radius: 0;
+        background: $slate-1;
+        color: $tWhite-1;
+      }
+      .card-content {
+        font-size: 20px;
+      }
+    }
+  }
+  .payment-transfer {
+    margin-bottom: $m-10 * 5;
+    .transfer-title {
+      margin-bottom: $m-10 * 3;
+    }
+    .transfer-card {
+      overflow: hidden;
+      border-color: $gray-1;
+      .ant-card-head {
+        background: $primary;
+        border-radius: 0;
+      }
+      .card-item {
+        width: 100%;
+        margin: $m-10 0;
+      }
+    }
+  }
+  .payment-cash {
+    margin-bottom: $m-10 * 5;
+    .cash-title {
+      margin-bottom: $m-10 * 3;
+    }
+    .cash-map {
+      width: 100%;
+      height: 300px;
+      border-radius: $lightRadius;
+    }
+  }
+  .payment-cod {
+    margin-bottom: $m-10 * 5;
+  }
+}

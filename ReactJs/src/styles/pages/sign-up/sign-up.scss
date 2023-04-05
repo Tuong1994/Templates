@@ -1,0 +1,12 @@
+.sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $p-10 0;
+  .sign-up-card {
+    min-width: 700px;
+    @include respond(smallTablet) {
+      min-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.footer {
+  background: $slate-1;
+  padding: $p-10 $p-10 * 5;
+  .footer-info {
+    padding: $p-10;
+    color: $tPrimary;
+    background: $primary;
+    border-radius: $lightRadius;
+  }
+  .footer-features {
+    padding: $p-10 * 2 0;
+    .features-input {
+      &:hover,
+      &:focus {
+        border-color: $gray-1;
+      }
+    }
+    .features-btn {
+      background: $primary !important;
+      color: $tPrimary;
+    }
+    .features-title {
+      color: $tWhite-1;
+    }
+    .features-list {
+      color: $tWhite-1;
+      .list-link {
+        color: $tWhite-1;
+      }
+    }
+    .features-logo {
+      width: 35px;
+      height: 35px;
+      background: $white;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+    .features-divider {
+      background: $white;
+    }
+  }
+  @include respond(largePhone) {
+    padding: $p-10;
+  }
+}

@@ -1,0 +1,28 @@
+.pagination {
+  width: 100%;
+  padding: $p-10 * 5 0;
+  display: flex;
+  justify-content: flex-end;
+  .pagination-inner {
+    display: flex;
+    align-items: center;
+    .ant-pagination-prev,
+    .ant-pagination-next,
+    .ant-pagination-item-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ant-pagination-item-container {
+      .anticon {
+        margin-top: $m-10;
+      }
+    }
+    .ant-pagination-item-active {
+      border-color: $primary;
+      a {
+        color: $tSecondary;
+      }
+    }
+  }
+}

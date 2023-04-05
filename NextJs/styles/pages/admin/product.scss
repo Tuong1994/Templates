@@ -1,0 +1,14 @@
+.product-form {
+  .form-card {
+    margin-bottom: $m-10 * 3;
+  }
+  .form-info {
+    .info-price {
+      width: 100%;
+      justify-content: flex-end;
+      .price-number {
+        margin: 0;
+      }
+    }
+  }
+}

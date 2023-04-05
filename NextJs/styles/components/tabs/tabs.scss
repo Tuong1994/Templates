@@ -1,0 +1,30 @@
+.tabs {
+  width: 100%;
+  .ant-tabs-nav-wrap {
+    border-radius: $lightRadius;
+    padding: 0 $p-10 * 2;
+    background: $primary;
+    .ant-tabs-tab {
+      &:hover {
+        color: $tPrimary;
+      }
+      .ant-tabs-tab-btn {
+        min-width: 80px;
+        width: min-content;
+        max-width: 100px;
+        text-align: center;
+        @include respond(phone) {
+          min-width: 60px;
+        }
+      }
+    }
+    .ant-tabs-tab.ant-tabs-tab-active {
+      .ant-tabs-tab-btn {
+        color: $tPrimary;
+      }
+    }
+    .ant-tabs-ink-bar {
+      background: $dark-1;
+    }
+  }
+}

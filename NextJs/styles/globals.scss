@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./base/base.scss";
+
+html,
+body {
+  font-family: var(--poppins-font);
+}
+
+// ANTD FORM ITEM
+.ant-form-item {
+  margin-bottom: $m-10;
+}
+
+// ANTD SELECT
+.ant-select-single {
+  &:hover .ant-select-selector {
+    border-color: $primary !important;
+  }
+  .ant-select-selector {
+    border-radius: $lightRadius;
+    border-color: $gray-1 !important;
+  }
+}
+
+// ANTD INPUT
+.ant-input,
+.ant-input-affix-wrapper {
+  border-radius: $lightRadius;
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border-color: $primary !important;
+  }
+}
+
+// ANTD DATEPICKER
+.ant-picker {
+  border-radius: $lightRadius;
+}
+
+// ANTD BTN
+.ant-btn {
+  border-radius: $lightRadius;
+}
+
+// ANTD DEFAULT BTN
+.ant-btn-default {
+  &:hover {
+    border-color: $gray-2 !important;
+    color: $tPrimary !important;
+  }
+}
+
+// ANTD PRIMARY BTN
+.ant-btn-primary {
+  background: $primary;
+  color: $tPrimary;
+  &:hover {
+    opacity: 0.7;
+    background: $primary !important;
+    color: $tPrimary !important;
+  }
+}
+
+.ant-btn-primary.ant-btn-background-ghost {
+  color: $tPrimary;
+  border-color: $dark-1;
+  &:hover {
+    color: $tWhite-1 !important;
+    background: $dark-1 !important;
+    border-color: $dark-1 !important;
+    opacity: 1 !important;
+  }
+}
+
+// ANTD DRAWER
+.ant-drawer-content-wrapper {
+  .ant-drawer-content {
+    background: $slate-1;
+    .ant-drawer-body {
+      padding: $p-10 * 2 $p-10 + 5;
+    }
+  }
+  @include respond(largePhone) {
+    width: 270px !important;
+  }
+}
+
+// ANTD MODAL
+.ant-modal {
+  .ant-modal-content {
+    padding: 0;
+    border-radius: $lightRadius;
+    .ant-modal-header {
+      padding: $p-10 + 5 $p-10 * 2;
+      background: $primary;
+      border-top-left-radius: $lightRadius;
+      border-top-right-radius: $lightRadius;
+    }
+    .ant-modal-body {
+      padding: $p-10 * 2;
+    }
+    .ant-modal-footer {
+      border-top: 1px solid $gray-1;
+      padding: $p-10 + 5 $p-10 * 2;
+    }
+  }
+}
+
+// ADMIN ANT MODAL
+.admin-ant-modal {
+  .ant-modal-content {
+    .ant-modal-header {
+      background: $blue-2;
+      .ant-modal-title {
+        color: $tWhite-1;
+      }
+    }
+    .ant-modal-footer {
+      .ant-btn-primary {
+        background: $blue-2;
+        color: $tWhite-1;
+        &:hover {
+          background: $blue-1 !important;
+          color: $tWhite-1 !important;
+        }
+      }
+    }
+  }
+}
+
+// ANTD DESCRIPTIONS
+.ant-descriptions {
+  .ant-descriptions-view {
+    border: unset !important;
+    .ant-descriptions-row {
+      border-bottom: 1px solid $gray-2;
+      .ant-descriptions-item-label {
+        background: transparent;
+        border-inline-end: unset;
+      }
+    }
+  }
+}
+
+// ANTD CARD
+.ant-card {
+  border-radius: $lightRadius;
+  border-color: $gray-2;
+}
+
+// ANTD DIVIDER
+.ant-divider {
+  border-block-start-color: $gray-2;
+}
+
+// ANTD LAYOUT CONTENT
+.app-content {
+  padding: 0 $p-10 * 5;
+  @include respond(laptop) {
+    padding: 0 $p-10;
+  }
+  @include respond(smallTablet) {
+    padding-top: $p-10 * 8;
+  }
+}
+
+// ANTD ADMIN LAYOUT CONTENT
+.app-admin-content {
+  padding-top: $p-10 * 8;
+  .content-sider {
+    width: 200px;
+    height: 100vh;
+    padding-top: $p-10 * 8;
+    background: $blue-1;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .sider-menu {
+      background: transparent;
+      .ant-menu-item {
+        color: $tWhite-1;
+        &:hover {
+          background: $white;
+        }
+      }
+      .ant-menu-item-selected {
+        color: $tPrimary;
+      }
+    }
+    @include respond(tablet) {
+      display: none;
+    }
+    .ant-layout-sider-trigger {
+      background: $blue-2;
+    }
+  }
+  .content-inner {
+    margin-left: 200px;
+    padding: $p-10 * 2;
+    min-height: 100vh;
+    transition: margin-left 0.2s ease;
+
+    // ANTD PRIMARY BTN
+    .ant-btn-primary {
+      background: $green-1;
+      color: $tWhite-1;
+      &:hover {
+        opacity: 0.7;
+        background: $green-1 !important;
+        color: $tWhite-1 !important;
+      }
+    }
+
+    .admin-button {
+      background: $blue-2;
+      color: $tWhite-1;
+      &:hover {
+        background: $blue-1 !important;
+        color: $tWhite-1 !important;
+      }
+    }
+
+    .form-card--border {
+      border-color: $gray-1;
+    }
+
+    // ANTD SELECT
+    .ant-select-single {
+      &:hover .ant-select-selector {
+        border-color: $blue-2 !important;
+      }
+    }
+
+    // ANTD INPUT
+    .ant-input,
+    .ant-input-affix-wrapper {
+      &:hover,
+      &:focus,
+      &:focus-within {
+        border-color: $blue-2 !important;
+      }
+    }
+
+    @include respond(tablet) {
+      margin: 0;
+    }
+  }
+  .content-inner-collapse {
+    margin-left: 80px;
+  }
+}

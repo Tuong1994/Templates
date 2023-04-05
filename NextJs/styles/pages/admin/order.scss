@@ -1,0 +1,62 @@
+.order-form {
+  .form-card {
+    margin-bottom: $m-10 * 3;
+    .card-product-list {
+      overflow-x: auto;
+      .product-list-item {
+        padding: $p-5 $p-10;
+        margin-bottom: $m-10;
+        border: 1px dashed $blue-2;
+        border-radius: $regularRadius;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .item-trash-icon {
+          color: $tRed-1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.select-product-modal {
+  .select-product-modal--height {
+    height: 500px;
+    padding-right: 10px;
+    overflow-y: scroll;
+  }
+  .select-product-modal-item {
+    width: 100%;
+    margin-bottom: $m-10;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:last-child {
+      margin: 0;
+    }
+    &:hover {
+      border-color: $blue-1;
+      background: $RGBA-blue-1;
+    }
+    .ant-card-body {
+      padding: $p-10 $p-10 * 2;
+    }
+  }
+  .select-product-modal-item-selected {
+    border-color: $blue-1;
+    background: $RGBA-blue-1;
+  }
+  .select-product-modal-pagination {
+    padding: 0;
+  }
+}
+
+.create-product-modal {
+  .create-product-modal-price {
+    width: 100%;
+    justify-content: flex-end;
+    .price-number {
+      margin: 0;
+    }
+  }
+}

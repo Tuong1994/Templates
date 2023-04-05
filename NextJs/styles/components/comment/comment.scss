@@ -1,0 +1,67 @@
+.comment {
+  border-color: $gray-2;
+  border-radius: $lightRadius;
+  .comment-control {
+    border: none;
+    border-bottom: 1px solid $gray-2;
+    border-radius: 0;
+    margin-bottom: $m-10 * 2;
+    .ant-card-body {
+      padding: $p-10 0;
+    }
+    .control-title {
+      margin-bottom: $m-5;
+    }
+    .control-wrap {
+      margin: 0;
+      .wrap-item {
+        margin: $m-10 0;
+      }
+    }
+  }
+  .comment-list {
+    .list-item {
+      margin-bottom: $m-10;
+      .item-content {
+        width: 100%;
+        margin-bottom: $m-10;
+        padding: $p-10;
+        border: 1px solid $gray-2;
+        border-radius: $lightRadius;
+        display: flex;
+        .content-inner {
+          width: 100%;
+          margin-left: $m-10;
+          .inner-text {
+            padding: $p-10;
+            margin-bottom: $m-10;
+            border-radius: $lightRadius;
+            background: $gray-1;
+          }
+          .inner-action {
+            .action-btn {
+              border: 0;
+            }
+          }
+        }
+      }
+      .item-child {
+        margin-left: $m-10 * 2;
+        position: relative;
+        .child-collapse {
+          width: 1px;
+          height: 100%;
+          background: $gray-2;
+          position: absolute;
+          top: 0;
+          left: -20px;
+        }
+      }
+    }
+  }
+  .ant-card-body {
+    @include respond(largePhone) {
+      padding: $p-10;
+    }
+  }
+}

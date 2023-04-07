@@ -1,5 +1,6 @@
 import * as Carousel from "./carousel";
 import * as Fields from "./fields";
+import * as Empty from "./empty";
 import FormLayout from "./form_layout";
 import Rate from "./rate";
 import Tabs from "./tabs";
@@ -17,6 +18,7 @@ import InfoRow from "./info_row";
 export {
   Carousel,
   Fields,
+  Empty,
   FormLayout,
   Header,
   Footer,

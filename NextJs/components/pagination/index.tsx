@@ -32,6 +32,7 @@ const Pagination: React.FC<PaginationProps> = ({
         size={size}
         simple={simple}
         total={total}
+        hideOnSinglePage
         defaultCurrent={page}
         prevIcon={<LeftOutlined />}
         nextIcon={<RightOutlined />}

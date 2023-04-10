@@ -48,7 +48,7 @@ const SignUp: React.FC<{}> = (props) => {
           </Antd.Row>
 
           <Antd.Divider orientation="left" orientationMargin={0}>
-            {langs?.user.contactInfo}
+            {langs?.customer.contactInfo}
           </Antd.Divider>
 
           <Antd.Row gutter={16}>
@@ -109,7 +109,7 @@ const SignUp: React.FC<{}> = (props) => {
           </Antd.Row>
 
           <Antd.Divider orientation="left" orientationMargin={0}>
-            {langs?.user.address}
+            {langs?.customer.address}
           </Antd.Divider>
 
           <Antd.Row gutter={16}>

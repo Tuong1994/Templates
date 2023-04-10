@@ -16,6 +16,9 @@ interface TextAreaCustomProps {
   placeholder?: string;
   rootClassName?: string;
   rules?: Antd.FormRule[];
+  size?: TextAreaProps["size"];
+  requiredMark?: Antd.FormItemProps["requiredMark"];
+  hasFeedback?: Antd.FormItemProps["hasFeedback"];
   onChange?: TextAreaProps["onChange"];
   onBlur?: TextAreaProps["onBlur"];
 }
@@ -32,6 +35,9 @@ const TextArea: React.FC<TextAreaCustomProps> = ({
   placeholder,
   rootClassName,
   rules,
+  size,
+  requiredMark,
+  hasFeedback,
   onChange,
   onBlur,
 }) => {
@@ -44,6 +50,8 @@ const TextArea: React.FC<TextAreaCustomProps> = ({
       required={required}
       label={label}
       rules={rules}
+      requiredMark={requiredMark}
+      hasFeedback={hasFeedback}
     >
       <Antd.Input.TextArea
         rows={rows}
@@ -51,6 +59,7 @@ const TextArea: React.FC<TextAreaCustomProps> = ({
         allowClear={allowClear}
         disabled={disabled}
         readOnly={readOnly}
+        size={size}
         placeholder={placeholder ?? langs?.common.form.placeholder.type}
         onChange={onChange}
         onBlur={onBlur}

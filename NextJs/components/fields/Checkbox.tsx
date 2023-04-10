@@ -9,6 +9,8 @@ interface CheckboxProps {
   rootClassName?: string;
   rules?: Antd.FormRule[];
   children?: string | React.ReactNode;
+  requiredMark?: Antd.FormItemProps["requiredMark"];
+  hasFeedback?: Antd.FormItemProps["hasFeedback"];
   onChange?: Antd.CheckboxProps["onChange"];
 }
 
@@ -19,6 +21,8 @@ const Checkbox: React.FC<CheckboxProps> = ({
   rootClassName,
   rules,
   children,
+  requiredMark,
+  hasFeedback,
   onChange,
 }) => {
   return (
@@ -27,6 +31,8 @@ const Checkbox: React.FC<CheckboxProps> = ({
       name={name}
       required={required}
       rules={rules}
+      requiredMark={requiredMark}
+      hasFeedback={hasFeedback}
     >
       <Antd.Checkbox disabled={disabled} onChange={onChange}>
         {children}

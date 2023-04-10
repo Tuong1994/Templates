@@ -1,6 +1,8 @@
-export interface ISelectOption {
+import { DefaultOptionType } from "antd/es/select";
+
+export interface ISelectOption extends DefaultOptionType {
   label: string | React.ReactNode | React.ReactNode[];
-  value: number | string | boolean;
+  value: number | string;
 }
 
 export interface IOptions {

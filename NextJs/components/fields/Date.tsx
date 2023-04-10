@@ -12,6 +12,12 @@ interface DateProps {
   placeholder?: string;
   rootClassName?: string;
   rules?: Antd.FormRule[];
+  size?: Antd.DatePickerProps["size"];
+  format?: Antd.DatePickerProps["format"];
+  requiredMark?: Antd.FormItemProps["requiredMark"];
+  hasFeedback?: Antd.FormItemProps["hasFeedback"];
+  onChange?: Antd.DatePickerProps["onChange"];
+  onBlur?: Antd.DatePickerProps["onBlur"];
 }
 
 const Date: React.FC<DateProps> = ({
@@ -23,6 +29,12 @@ const Date: React.FC<DateProps> = ({
   placeholder,
   rootClassName,
   rules,
+  size,
+  format = "DD/MM/YYYY",
+  requiredMark,
+  hasFeedback,
+  onChange,
+  onBlur,
 }) => {
   const langs = useLangStore((state) => state.langs);
 
@@ -33,12 +45,18 @@ const Date: React.FC<DateProps> = ({
       required={required}
       label={label}
       rules={rules}
+      requiredMark={requiredMark}
+      hasFeedback={hasFeedback}
     >
       <Antd.DatePicker
         className="w-full"
         allowClear={allowClear}
         disabled={disabled}
+        format={format}
+        size={size}
         placeholder={placeholder ?? langs?.common.form.placeholder.type}
+        onChange={onChange}
+        onBlur={onBlur}
       />
     </Antd.Form.Item>
   );

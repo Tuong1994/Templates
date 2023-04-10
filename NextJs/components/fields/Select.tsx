@@ -14,6 +14,9 @@ interface SelectProps {
   rootClassName?: string;
   options?: ISelectOption[];
   rules?: Antd.FormRule[];
+  size?: Antd.SelectProps["size"];
+  requiredMark?: Antd.FormItemProps["requiredMark"];
+  hasFeedback?: Antd.FormItemProps["hasFeedback"];
   onChange?: Antd.SelectProps["onChange"];
   onBlur?: Antd.SelectProps["onBlur"];
 }
@@ -27,6 +30,9 @@ const Select: React.FC<SelectProps> = ({
   placeholder,
   rootClassName,
   rules,
+  size,
+  requiredMark,
+  hasFeedback = true,
   options,
   onChange,
   onBlur,
@@ -40,12 +46,15 @@ const Select: React.FC<SelectProps> = ({
       required={required}
       label={label}
       rules={rules}
+      requiredMark={requiredMark}
+      hasFeedback={hasFeedback}
     >
       <Antd.Select
         allowClear={allowClear}
         disabled={disabled}
-        placeholder={placeholder ?? langs?.common.form.placeholder.select}
         options={options}
+        size={size}
+        placeholder={placeholder ?? langs?.common.form.placeholder.select}
         onChange={onChange}
         onBlur={onBlur}
       />

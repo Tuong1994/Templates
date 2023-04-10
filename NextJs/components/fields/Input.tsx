@@ -14,6 +14,9 @@ interface InputProps {
   placeholder?: string;
   rootClassName?: string;
   rules?: Antd.FormRule[];
+  requiredMark?: Antd.FormItemProps["requiredMark"];
+  hasFeedback?: Antd.FormItemProps["hasFeedback"];
+  sizes?: Antd.ImageProps["sizes"];
   onChange?: Antd.InputProps["onChange"];
   onBlur?: Antd.InputProps["onBlur"];
 }
@@ -29,6 +32,9 @@ const Input: React.FC<InputProps> = ({
   placeholder,
   rootClassName,
   rules,
+  requiredMark,
+  hasFeedback = true,
+  sizes,
   onChange,
   onBlur,
 }) => {
@@ -38,6 +44,7 @@ const Input: React.FC<InputProps> = ({
     allowClear: allowClear,
     disabled: disabled,
     readOnly: readOnly,
+    sizes: sizes,
     placeholder: placeholder ?? langs?.common.form.placeholder.type,
     onChange: onChange,
     onBlur: onBlur,
@@ -50,6 +57,8 @@ const Input: React.FC<InputProps> = ({
       required={required}
       label={label}
       rules={rules}
+      requiredMark={requiredMark}
+      hasFeedback={hasFeedback}
     >
       {type === "input" ? (
         <Antd.Input {...commonProps} />

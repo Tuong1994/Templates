@@ -72,6 +72,11 @@ const common = {
     },
     validate: {
       required: "Vui lòng không bỏ trống",
+      email: "Email không hợp lệ",
+      min: "Ít nhất {{min}} ký tự",
+      max: "Dài nhất {{max}} ký tự",
+      phone: "Điện thoại không hợp lệ",
+      whiteSpace: "Không được có khoảng trắng",
     },
     action: {
       seeAll: "Xem tất cả",
@@ -93,6 +98,7 @@ const common = {
       action: "Nhấn hoặc kéo thả file vào khu vực để upload",
       imgTypes:
         "Chỉ hỗ trợ những file có định dạng PNG/JPG/JPEG và nhỏ hơn hoặc bằng 2MB",
+      optional: "Tùy chọn"
     },
   },
   option: {
@@ -151,11 +157,23 @@ const common = {
     updatedAt: "Ngày cập nhật",
   },
   noData: {
-    empty: "KHông có dữ liệu",
+    empty: "Không có dữ liệu",
     cutomer: "Không tìm thấy khách hàng",
     order: "Không tìm thấy đơn hàng",
     product: "Không tìm thấy sản phẩm",
     shipment: "Không tìm thấy vận chuyển",
+  },
+  message: {
+    success: {
+      signIn: "Đăng nhập thành công",
+      signUp: "Đăng ký thành công",
+      logout: "Đăng xuất thành công",
+    },
+    error: {
+      account: "Tài khoản không chính xác",
+      password: "Mật khẩu không chính xác",
+      network: "Lỗi mạng Api",
+    },
   },
 };
 

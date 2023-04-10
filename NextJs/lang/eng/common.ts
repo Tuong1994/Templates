@@ -72,6 +72,11 @@ const common = {
     },
     validate: {
       required: "This field is required",
+      email: "Email invalid",
+      min: "At least {{min}} charaters",
+      max: "Max {{max}} characters",
+      phone: "Phone invalid",
+      whiteSpace: "Can't have white space",
     },
     action: {
       seeAll: "See all",
@@ -93,6 +98,7 @@ const common = {
       action: " Click or drag file to this area to upload",
       imgTypes:
         "Only file types PNG/JPG/JPEG are supported and less than or equal to 2MB",
+      optional: "Optional",
     },
   },
   option: {
@@ -156,6 +162,18 @@ const common = {
     order: "No order had founded",
     product: "No product had founded",
     shipment: "No shipment had founded",
+  },
+  message: {
+    success: {
+      signIn: "Sign in success",
+      signUp: "Sign up success",
+      logout: "Logout success",
+    },
+    error: {
+      account: "Account is not corrected",
+      password: "Password is not corrected",
+      network: "Api network error",
+    },
   },
 };
 

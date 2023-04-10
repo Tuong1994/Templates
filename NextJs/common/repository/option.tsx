@@ -1,7 +1,11 @@
 import useLangStore from "@/store/LangStore";
 import { EFilter } from "../enum/base";
 import { EGender, ERole } from "../enum/user";
-import { EInventoryStatus, EProductStatus } from "../enum/product";
+import {
+  EInventoryStatus,
+  EProductStatus,
+  EProductType,
+} from "../enum/product";
 import { IOptions } from "../interface/option";
 import { EOrderStatus, EPaymentMethod } from "../enum/order";
 import { EShipmentStatus } from "../enum/shipment";
@@ -34,8 +38,8 @@ const useOption = () => {
       { label: langs?.common.option.active, value: EProductStatus.ACTIVE },
     ],
     productType: [
-      { label: langs?.common.option.bestSale, value: true },
-      { label: langs?.common.option.outstand, value: true },
+      { label: langs?.common.option.bestSale, value: EProductType.BEST_SALE },
+      { label: langs?.common.option.outstand, value: EProductType.OUT_STAND },
     ],
     inventoryStatus: [
       { label: langs?.common.option.inStock, value: EInventoryStatus.IN_STOCK },

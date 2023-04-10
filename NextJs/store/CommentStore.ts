@@ -1,13 +1,13 @@
 import { create, StateCreator } from "zustand";
 import { IComment } from "@/common/interface/comment";
 
-interface ICommentStore {
+interface CommentStore {
   comments: IComment[];
   getRootComments(): IComment[];
   getReplies(id: string): IComment[];
 }
 
-const store: StateCreator<ICommentStore> = (set, get) => ({
+const store: StateCreator<CommentStore> = (set, get) => ({
   comments: [
     {
       id: "1",
